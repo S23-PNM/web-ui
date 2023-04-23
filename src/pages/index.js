@@ -6,6 +6,8 @@ import GraphTab from "../components/graph";
 
 export default function Home() {
 
+  const data = [0.2, 0.9, 0.4, 0.7, 0.6, 0.4, 0.8, 0.2, 1.0];
+
   return (
     <main>
       <h1 className="text-6xl leading-tight mb-6 font-bold font-serif">Dashboard</h1>
@@ -26,6 +28,11 @@ export default function Home() {
       <TimeTab title="12 Hours" /> 
       <TimeTab title="1 Hour" /> 
       </div>
+
+      <div>
+        <GraphTab data={data} width={400} height={300} color="blue" />
+      </div>
+
     </main>
   )
 }
