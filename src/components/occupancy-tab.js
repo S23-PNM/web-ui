@@ -1,7 +1,7 @@
 function OccupancyTab(props) {
     return (
       <div
-        className="inline-block bg-white-500 bg-opacity-75 rounded-md text-black font-bold"
+        className="inline-block font-serif bg-white-500 bg-opacity-75 rounded-md text-black font-bold"
         style={{ padding: '10px' }}
         type="button"
       >
