@@ -2,12 +2,13 @@ import LocationTab from "../components/location-tab";
 import StatusTab from "../components/status-tab";
 import OccupancyTab from "../components/occupancy-tab";
 import TimeTab from "../components/time-tab";
+import GraphTab from "../components/graph";
 
 export default function Home() {
 
   return (
     <main>
-      <h1 className="text-6xl leading-tight font-bold">Dashboard</h1>
+      <h1 className="text-6xl leading-tight mb-6 font-bold font-serif">Dashboard</h1>
       <LocationTab title="Spartan Food Pantry" />
       <LocationTab title="The Commons" />
       <div className="mt-4">
