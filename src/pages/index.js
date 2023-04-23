@@ -6,6 +6,8 @@ export default function Home() {
     <main>
       <h1 className="text-6xl leading-tight font-bold">Dashboard</h1>
       <LocationTab title="Spartan Food Pantry" />
+      <LocationTab title="The Commons" />
+      
     </main>
   )
 }
