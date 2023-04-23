@@ -9,7 +9,9 @@ export default function Home() {
       <LocationTab title="Spartan Food Pantry" />
       <LocationTab title="The Commons" />
       <div className="mt-4">
-        <StatusTab title="testing" />
+        <StatusTab title="Status" value="Crowded" />
+        <StatusTab title="Current Occupancy" value="5 People" />
+        <StatusTab title="Minimum Occupancy" value="5 People" />
       </div>
       
     </main>
