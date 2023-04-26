@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix"
+    "lint": "next lint --fix",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
@@ -20,6 +21,7 @@
     "eslint": "8.38.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "13.3.0",
+    "eslint-config-prettier": "^8.8.0",
     "prettier": "^2.8.7"
   }
 }
