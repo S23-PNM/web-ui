@@ -1,3 +1,6 @@
 {
-  "extends": ["airbnb", "next"]
+  "extends": ["airbnb", "next"],
+  "rules": {
+    "no-plusplus": "off"
+  }
 }

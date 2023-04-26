@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 
-function GraphTab({ data, width, height, color }) {
+function GraphTab({
+  data, width, height, color,
+}) {
   const canvasRef = useRef(null);
 
   useEffect(() => {

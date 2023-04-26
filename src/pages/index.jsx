@@ -1,13 +1,8 @@
-import LocationTab from "../components/location-tab";
-import StatusTab from "../components/status-tab";
-import OccupancyTab from "../components/occupancy-tab";
-import TimeTab from "../components/time-tab";
-import GraphTab from "../components/graph";
+import LocationTab from '../components/location-tab';
+import StatusTab from '../components/status-tab';
+import OccupancyTab from '../components/occupancy-tab';
 
 export default function Home() {
-
-  
-
   return (
     <main>
       <h1 className="text-6xl leading-tight mb font-bold">Dashboard</h1>
@@ -19,10 +14,9 @@ export default function Home() {
         <StatusTab title="Minimum Occupancy" value="5 People" />
       </div>
       <div className="mt-4">
-      <OccupancyTab title="Recent Occupancy" /> 
+        <OccupancyTab title="Recent Occupancy" />
       </div>
-      
 
     </main>
-  )
+  );
 }
