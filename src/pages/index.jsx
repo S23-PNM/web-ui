@@ -1,6 +1,6 @@
-import LocationTab from '../components/location-tab';
-import StatusTab from '../components/status-tab';
-import OccupancyTab from '../components/occupancy-tab';
+import LocationTab from "../components/location-tab";
+import StatusTab from "../components/status-tab";
+import OccupancyTab from "../components/occupancy-tab";
 
 export default function Home() {
   return (
@@ -16,7 +16,6 @@ export default function Home() {
       <div className="mt-4">
         <OccupancyTab title="Recent Occupancy" />
       </div>
-
     </main>
   );
 }

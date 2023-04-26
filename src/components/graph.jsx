@@ -1,13 +1,11 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 
-function GraphTab({
-  data, width, height, color,
-}) {
+function GraphTab({ data, width, height, color }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const context = canvas.getContext('2d');
+    const context = canvas.getContext("2d");
 
     // Clear canvas
     context.clearRect(0, 0, width, height);
