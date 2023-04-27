@@ -1,6 +1,7 @@
 {
   "extends": ["airbnb", "next", "prettier"],
   "rules": {
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "import/no-unresolved": "off"
   }
 }

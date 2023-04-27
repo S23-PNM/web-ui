@@ -38,7 +38,7 @@ export default function Home() {
         <StatusTab title="Current Occupancy" value={`${status.count} People`} />
       </div>
       <div className="mt-4">
-        <OccupancyTab title="Recent Occupancy" />
+        <OccupancyTab title="Recent Occupancy" location={location} />
       </div>
     </main>
   );

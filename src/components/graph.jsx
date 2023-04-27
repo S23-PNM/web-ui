@@ -1,35 +1,45 @@
-import React, { useRef, useEffect } from "react";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
-function GraphTab({ data, width, height, color }) {
-  const canvasRef = useRef(null);
+function GraphTab({ data }) {
+  const dataToRender = data.map((value, index) => ({
+    name: index.toString(),
+    numPeople: value * 100,
+  }));
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const context = canvas.getContext("2d");
-
-    // Clear canvas
-    context.clearRect(0, 0, width, height);
-
-    // Set line color
-    context.strokeStyle = color;
-
-    // Draw data points
-    context.beginPath();
-    for (let i = 0; i < data.length; i++) {
-      const x = (i / (data.length - 1)) * width;
-      const y = (1 - data[i]) * height;
-      if (i === 0) {
-        context.moveTo(x, y);
-      } else {
-        context.lineTo(x, y);
-      }
-    }
-
-    // Draw line
-    context.stroke();
-  }, [data, width, height, color]);
-
-  return <canvas ref={canvasRef} width={width} height={height} />;
+  return (
+    <ResponsiveContainer height={240}>
+      <LineChart data={dataToRender} fontSize={14} fontWeight={500}>
+        <Line strokeWidth={4} stroke="#3F3F46" dataKey="numPeople" />
+        <Tooltip />
+        <XAxis
+          height={48}
+          label={{
+            value: "Time",
+            position: "insideBottom",
+            textAnchor: "middle",
+          }}
+          dataKey="name"
+        />
+        <YAxis
+          width={48}
+          label={{
+            value: "# of people",
+            angle: -90,
+            position: "insideLeft",
+            textAnchor: "middle",
+          }}
+          dataKey="numPeople"
+        />
+      </LineChart>
+    </ResponsiveContainer>
+  );
 }
 
 export default GraphTab;
