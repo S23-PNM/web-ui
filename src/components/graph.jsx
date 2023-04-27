@@ -8,15 +8,10 @@ import {
 } from "recharts";
 
 function GraphTab({ data }) {
-  const dataToRender = data.map((value, index) => ({
-    name: index.toString(),
-    numPeople: value * 100,
-  }));
-
   return (
     <ResponsiveContainer height={240}>
-      <LineChart data={dataToRender} fontSize={14} fontWeight={500}>
-        <Line strokeWidth={4} stroke="#3F3F46" dataKey="numPeople" />
+      <LineChart data={data} fontSize={14} fontWeight={500}>
+        <Line strokeWidth={4} stroke="#3F3F46" dataKey="count" />
         <Tooltip />
         <XAxis
           height={48}
@@ -25,7 +20,7 @@ function GraphTab({ data }) {
             position: "insideBottom",
             textAnchor: "middle",
           }}
-          dataKey="name"
+          dataKey="time"
         />
         <YAxis
           width={48}
@@ -35,7 +30,7 @@ function GraphTab({ data }) {
             position: "insideLeft",
             textAnchor: "middle",
           }}
-          dataKey="numPeople"
+          dataKey="count"
         />
       </LineChart>
     </ResponsiveContainer>
